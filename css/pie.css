@@ -1,0 +1,26 @@
+/* Pie de página */
+.pie { background: var(--superficie); border-top: 1px solid var(--borde); margin-top: 80px; padding-top: 56px; }
+.pie__rejilla { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; padding-bottom: 48px; }
+.pie .logo { font-size: 18px; margin-bottom: 16px; }
+.pie .logo__icono { width: 28px; height: 28px; }
+.pie__descripcion { color: var(--texto-suave); font-size: 15px; max-width: 280px; }
+.pie h3 { font-size: 15px; text-transform: uppercase; margin-bottom: 16px; }
+.pie li { margin-bottom: 12px; }
+.pie li a { color: var(--texto-suave); font-size: 15px; }
+.pie__inferior {
+  border-top: 1px solid var(--borde); padding: 28px 0;
+  display: flex; justify-content: space-between; align-items: center; color: var(--texto-suave); font-size: 14px;
+}
+.pie__redes { display: flex; gap: 12px; }
+.pie__redes a { width: 32px; height: 32px; border-radius: 50%; background: var(--superficie-2); display: grid; place-items: center; }
+.pie__redes svg { width: 16px; height: 16px; }
+.pie__enlaces { display: none; gap: 20px; font-size: 14px; color: var(--texto-suave); }
+
+@media (max-width: 800px) {
+  .pie { margin-top: 40px; padding: 24px 0 16px; }
+  .pie__rejilla { grid-template-columns: 1fr; padding-bottom: 16px; }
+  .pie__rejilla > div:not(:first-child) { display: none; }
+  .pie__enlaces { display: flex; margin-bottom: 20px; }
+  .pie__inferior { border: 0; padding: 0; font-size: 12px; }
+  .pie__redes { display: none; }
+}

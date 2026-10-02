@@ -1,0 +1,62 @@
+/* Página de compra */
+.aviso-reserva { background: var(--alerta); padding: 12px 0; font-size: 14px; font-weight: 500; }
+.aviso-reserva strong { color: #fca5a5; }
+
+.compra-layout { display: grid; grid-template-columns: 1fr 420px; gap: 48px; padding-top: 48px; align-items: start; }
+.paso { margin-bottom: 40px; }
+.paso h2 { display: flex; align-items: center; gap: 12px; font-size: 22px; margin-bottom: 24px; }
+.paso__numero { width: 24px; height: 24px; border-radius: 50%; background: var(--primario); font: 700 12px var(--fuente-texto); display: grid; place-items: center; }
+.paso + .paso { border-top: 1px solid var(--borde); padding-top: 40px; }
+.formulario-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+
+.pagos-rapidos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.pago-rapido { padding: 13px; border-radius: 10px; border: 1px solid var(--borde); text-align: center; font-weight: 700; font-size: 14px; }
+.pago-rapido--apple { background: #000; color: #fff; }
+.pago-rapido--google { background: #fff; color: #1f2937; border-color: #fff; }
+
+.tarjeta-pago { background: var(--superficie); border: 1px solid var(--borde); border-radius: 12px; padding: 20px; }
+.tarjeta-pago > p { color: var(--primario-suave); font-size: 14px; font-weight: 500; margin-bottom: 16px; }
+.tarjeta-pago .campo { margin-bottom: 16px; }
+.tarjeta-pago .formulario-2col { gap: 16px; }
+.tarjeta-pago .campo:last-child, .tarjeta-pago .formulario-2col .campo { margin-bottom: 0; }
+
+/* Resumen */
+.resumen { background: var(--superficie); border: 1px solid var(--borde); border-radius: 20px; padding: 24px; }
+.resumen > h2 { font-size: 20px; margin-bottom: 20px; }
+.resumen__evento { background: var(--superficie-2); border-radius: 12px; padding: 16px; margin-bottom: 20px; }
+.resumen__evento h3 { font-size: 16px; font-family: var(--fuente-texto); text-transform: none; }
+.resumen__evento p { color: var(--texto-suave); font-size: 13px; margin: 4px 0 12px; }
+.resumen__linea { display: flex; justify-content: space-between; font-size: 13px; color: var(--texto-suave); }
+.resumen__evento .resumen__linea { border-top: 1px solid var(--borde); padding-top: 12px; }
+.resumen__evento .resumen__linea strong { color: var(--texto); }
+.descuento { display: flex; gap: 8px; padding-bottom: 20px; border-bottom: 1px solid var(--borde); }
+.descuento input { flex: 1; min-width: 0; background: var(--superficie-2); border: 1px solid var(--borde); border-radius: 8px; padding: 10px 12px; color: var(--texto); font: 13px var(--fuente-texto); }
+.descuento .boton { padding: 10px 16px; font-size: 13px; }
+.resumen__desglose { padding: 20px 0; }
+.resumen__desglose .resumen__linea { margin-bottom: 8px; }
+.resumen__total { display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed var(--borde); padding-top: 16px; margin-bottom: 24px; font-weight: 700; }
+.resumen__total strong { font: 700 24px var(--fuente-titulos); color: var(--primario-suave); }
+
+/* Barra inferior móvil */
+.barra-pago { display: none; }
+
+@media (max-width: 1000px) { .compra-layout { grid-template-columns: 1fr; } }
+@media (max-width: 800px) {
+  .aviso-reserva { text-align: center; }
+  .compra-layout { padding: 20px 16px 120px; gap: 0; }
+  .paso { margin-bottom: 24px; }
+  .paso + .paso { padding-top: 24px; }
+  .paso h2 { font-size: 18px; margin-bottom: 16px; }
+  .paso__numero { display: none; }
+  .formulario-2col { grid-template-columns: 1fr; gap: 16px; }
+  .tarjeta-pago .formulario-2col { grid-template-columns: 1fr 1fr; }
+  .pagos-rapidos, .tarjeta-pago > p, .resumen, .campo--telefono { display: none; }
+  .barra-pago {
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    position: fixed; bottom: 0; left: 0; right: 0; background: var(--superficie);
+    border-top: 1px solid var(--borde); padding: 16px;
+  }
+  .barra-pago small { display: block; font-size: 12px; color: var(--texto-suave); }
+  .barra-pago strong { font: 700 22px var(--fuente-titulos); color: var(--primario-suave); }
+  .barra-pago .boton { flex: 1; max-width: 260px; padding: 16px; }
+}

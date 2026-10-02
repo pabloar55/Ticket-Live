@@ -1,0 +1,24 @@
+/* Tarjeta de evento (portada) */
+.tarjeta-evento { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); overflow: hidden; }
+.tarjeta-evento__imagen { height: 220px; background: var(--superficie-2); }
+.tarjeta-evento__cuerpo { padding: 20px; }
+.tarjeta-evento__etiquetas { display: flex; gap: 8px; margin-bottom: 14px; }
+.tarjeta-evento h3 { font-size: 20px; margin-bottom: 6px; }
+.tarjeta-evento p { color: var(--texto-suave); font-size: 14px; min-height: 42px; }
+.tarjeta-evento__pie { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+.tarjeta-evento__pie .boton { padding: 10px 18px; font-size: 14px; }
+.favorito { width: 36px; height: 36px; border-radius: 8px; background: var(--superficie-2); border: 1px solid var(--borde); display: grid; place-items: center; color: var(--texto-suave); }
+.favorito--activo { color: #ef4444; }
+.favorito svg { width: 16px; height: 16px; }
+
+/* Variante móvil: fecha y precio abajo, botón corto a la derecha */
+.tarjeta-evento__fecha { color: var(--primario-suave); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.tarjeta-evento__precio { color: var(--texto-suave); font-size: 13px; }
+
+/* Imágenes de ejemplo (degradados, sustituir por fotos reales) */
+.img-1 { background: radial-gradient(circle at 30% 30%, #f59e0b55, transparent 40%), linear-gradient(135deg, #1e1b4b, #7c3aed 60%, #be185d); }
+.img-2 { background: radial-gradient(circle at 50% 40%, #fbbf2466, transparent 45%), linear-gradient(135deg, #1c1410, #78350f); }
+.img-3 { background: linear-gradient(135deg, #0f172a, #6d28d9 55%, #ec4899); }
+.img-4 { background: radial-gradient(circle at 60% 20%, #f472b6aa, transparent 35%), linear-gradient(135deg, #0b1020, #1d4ed8 70%, #7c3aed); }
+.img-5 { background: radial-gradient(circle at 70% 30%, #f9731688, transparent 35%), linear-gradient(135deg, #111, #7f1d1d); }
+.img-6 { background: linear-gradient(135deg, #1e1b4b, #db2777 70%, #38bdf8); }

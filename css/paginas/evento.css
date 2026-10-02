@@ -1,0 +1,77 @@
+/* Página de evento (selección de localidades) */
+.evento-hero { padding: 64px 0 48px; background: linear-gradient(180deg, #1e1b4b88, var(--fondo)), linear-gradient(135deg, #1e1b4b, #4c1d95 60%, #0f172a); }
+.evento-hero .etiqueta { background: var(--primario); color: var(--texto); }
+.evento-hero h1 { font-size: 48px; text-transform: none; margin: 12px 0; }
+.evento-hero__datos { display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--texto-suave); }
+.evento-hero__datos span:first-child { color: var(--primario-suave); }
+
+.evento-layout { display: grid; grid-template-columns: 1fr 420px; gap: 48px; padding-top: 48px; align-items: start; }
+.evento-layout h2 { font-size: 24px; }
+.evento-layout .subtitulo { color: var(--texto-suave); margin: 8px 0 24px; font-size: 15px; }
+
+/* Mapa del recinto */
+.mapa { background: var(--superficie); border: 1px solid var(--borde); border-radius: 20px; padding: 56px 24px; text-align: center; }
+.mapa__escenario-titulo { color: var(--texto-suave); font-size: 13px; font-weight: 700; text-transform: uppercase; margin-bottom: 16px; }
+.mapa__escenario { width: 320px; max-width: 100%; height: 32px; margin: 0 auto 24px; border: 2px solid var(--primario); border-radius: 8px; background: var(--superficie-2); }
+.zona { display: inline-block; padding: 14px 24px; border-radius: 8px; border: 2px solid; font-size: 13px; font-weight: 700; text-transform: uppercase; }
+.zona--pista { display: block; width: 290px; max-width: 100%; margin: 0 auto 16px; padding: 28px; color: var(--primario-suave); border-color: var(--primario); background: rgba(139, 92, 246, .15); }
+.zona--tribuna { color: #60a5fa; border-color: var(--azul); background: rgba(59, 130, 246, .1); }
+.zona--vip { color: var(--dorado); border-color: var(--dorado); background: rgba(245, 158, 11, .12); }
+.mapa__zonas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.leyenda { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 32px; font-size: 12px; color: var(--texto-suave); }
+.leyenda span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 8px; vertical-align: -1px; background: var(--c); }
+
+/* Panel de entradas */
+.panel-entradas { background: var(--superficie); border: 1px solid var(--borde); border-radius: 20px; padding: 24px; }
+.panel-entradas > h2 { font-size: 20px; margin-bottom: 20px; }
+.entrada { background: var(--superficie-2); border: 1px solid var(--borde); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.entrada--vip { border-color: var(--dorado); }
+.entrada__cabecera { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.entrada__cabecera h3 { font-size: 16px; font-family: var(--fuente-texto); font-weight: 700; text-transform: none; }
+.entrada__precio { font: 700 18px var(--fuente-titulos); color: var(--primario-suave); }
+.entrada--vip .entrada__precio { color: var(--dorado); }
+.entrada p { color: var(--texto-suave); font-size: 14px; }
+.entrada__cantidad { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; font-size: 14px; color: var(--texto-suave); }
+
+.selector { display: flex; align-items: center; gap: 12px; color: var(--texto); font-weight: 700; }
+.selector button { width: 24px; height: 24px; border: 0; border-radius: 6px; background: var(--fondo); color: var(--texto-suave); font-weight: 700; }
+.selector button:last-child { background: var(--primario); color: var(--texto); }
+
+.panel-entradas__total { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--borde); padding: 24px 0; color: var(--texto-suave); }
+.panel-entradas__total strong { color: var(--texto); font: 700 24px var(--fuente-titulos); }
+
+/* Barra inferior móvil */
+.barra-total { display: none; }
+
+@media (max-width: 1000px) { .evento-layout { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 800px) {
+  .evento-hero { padding: 24px 0; }
+  .evento-hero h1 { font-size: 24px; margin: 0 0 4px; }
+  .evento-hero .etiqueta { display: none; }
+  .evento-layout { padding-top: 24px; padding-bottom: 100px; }
+  .evento-layout h2 { font-size: 16px; }
+  .evento-layout .subtitulo { display: none; }
+  .mapa { padding: 20px; margin-bottom: 8px; }
+  .mapa__escenario-titulo, .mapa__escenario, .leyenda { display: none; }
+  .zona--pista { display: inline-block; width: auto; margin: 0; padding: 10px 14px; }
+  .zona { padding: 10px 14px; }
+  .mapa__zonas { justify-content: flex-start; }
+  .panel-entradas { background: none; border: 0; padding: 0; }
+  .panel-entradas__total, .panel-entradas > .boton { display: none; }
+  .panel-entradas > h2 { font-size: 16px; }
+  .entrada { background: var(--superficie); display: grid; grid-template-columns: 1fr auto; row-gap: 8px; align-items: center; }
+  .entrada__cabecera { display: contents; }
+  .entrada__precio { order: 2; justify-self: end; }
+  .entrada p { grid-column: 1; }
+  .entrada__cantidad { display: contents; }
+  .entrada__cantidad > span { display: none; }
+  .entrada .selector { grid-column: 2; grid-row: 2; }
+  .barra-total {
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    position: fixed; bottom: 0; left: 0; right: 0; background: var(--superficie);
+    border-top: 1px solid var(--borde); padding: 16px;
+  }
+  .barra-total small { display: block; font-size: 12px; color: var(--texto-suave); }
+  .barra-total strong { font: 700 22px var(--fuente-titulos); }
+  .barra-total .boton { flex: 1; max-width: 250px; padding: 16px; }
+}

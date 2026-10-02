@@ -1,0 +1,27 @@
+/* Registro / crear cuenta */
+.pagina-registro {
+  align-items: center; justify-content: center; padding: 24px 16px;
+  background:
+    radial-gradient(circle at 25% 30%, rgba(139, 92, 246, .18), transparent 28%),
+    radial-gradient(circle at 75% 65%, rgba(139, 92, 246, .14), transparent 30%),
+    var(--fondo);
+}
+.registro { flex: none; width: 100%; max-width: 480px; background: var(--superficie); border: 1px solid var(--borde); border-radius: 28px; padding: 48px; box-shadow: 0 20px 60px rgba(0, 0, 0, .4); }
+.registro .logo { justify-content: center; font-size: 22px; }
+.registro h1 { font-size: 32px; text-transform: none; text-align: center; margin-top: 24px; }
+.registro__intro { text-align: center; color: var(--texto-suave); font-size: 14px; margin: 8px 0 32px; }
+.registro form { display: flex; flex-direction: column; gap: 20px; }
+.entrada-icono { position: relative; }
+.entrada-icono input { padding-left: 46px; padding-right: 46px; }
+.entrada-icono svg { position: absolute; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--texto-suave); }
+.entrada-icono .icono-izq { left: 16px; }
+.entrada-icono .icono-der { right: 16px; }
+.registro .boton { margin-top: 8px; }
+.registro__pie { text-align: center; font-size: 14px; color: var(--texto-suave); margin-top: 20px; }
+.registro__pie a { color: var(--primario); font-weight: 700; margin-left: 4px; }
+
+@media (max-width: 800px) {
+  .registro { padding: 28px 24px; border-radius: 24px; }
+  .registro h1 { font-size: 26px; margin-top: 16px; }
+  .registro__intro { margin-bottom: 24px; }
+}

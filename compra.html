@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finalizar compra | Ticket Live</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cabecera.css">
+  <link rel="stylesheet" href="css/paginas/compra.css">
+</head>
+<body>
+<header class="cabecera">
+  <div class="contenedor cabecera__interior">
+    <a href="index.html" class="logo"><span class="logo__icono"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/></svg></span>Ticket Live</a>
+    <nav class="nav">
+        <a href="index.html" class="activo">Conciertos</a>
+        <a href="index.html">Festivales</a>
+        <a href="index.html">Teatro</a>
+        <a href="contacto.html">Ayuda</a>
+    </nav>
+    <div class="cabecera__acciones">
+      <label class="buscador"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" placeholder="Buscar artistas o recintos..."></label>
+      <a href="registro.html" class="cuenta"><span class="cuenta__avatar"></span>Mi Cuenta</a>
+      <div class="cabecera__iconos solo-movil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></div>
+    </div>
+  </div>
+</header>
+<div class="aviso-reserva"><div class="contenedor"><span class="solo-escritorio">¡Date prisa! Hemos reservado tus entradas. Tu reserva expira en <strong>09:59</strong> minutos.</span><span class="solo-movil">Tiempo restante de reserva: 09:59</span></div></div>
+<main class="contenedor compra-layout">
+  <form>
+    <section class="paso">
+      <h2><span class="paso__numero">1</span><span class="solo-escritorio">Información del asistente</span><span class="solo-movil">1. Asistente</span></h2>
+      <div class="formulario-2col">
+        <div class="campo"><label>Nombre</label><input type="text" value="Carlos" placeholder=""></div>
+        <div class="campo"><label>Apellidos</label><input type="text" value="Sánchez Gómez" placeholder=""></div>
+        <div class="campo"><label>Correo electrónico</label><input type="text" value="carlos.sanchez@email.com" placeholder=""></div>
+        <div class="campo campo--telefono"><label>Teléfono</label><input type="text" value="+34 654 321 098" placeholder=" "></div>
+      </div>
+    </section>
+    <section class="paso">
+      <h2><span class="paso__numero">2</span><span class="solo-escritorio">Método de pago</span><span class="solo-movil">2. Pago</span></h2>
+      <div class="pagos-rapidos"><div class="pago-rapido pago-rapido--apple">Pay</div><div class="pago-rapido pago-rapido--google">Google Pay</div></div>
+      <div class="tarjeta-pago">
+        <p>O paga con Tarjeta de Crédito/Débito</p>
+        <div class="campo"><label>Número de tarjeta</label><input type="text" placeholder="0000 0000 0000 0000"></div>
+        <div class="formulario-2col"><div class="campo"><label>Fecha de expiración</label><input type="text" placeholder="MM/AA"></div><div class="campo"><label>CVV</label><input type="text" placeholder="123"></div></div>
+      </div>
+    </section>
+  </form>
+
+  <aside class="resumen">
+    <h2>Resumen de compra</h2>
+    <div class="resumen__evento">
+      <h3>Coldplay – Barcelona</h3>
+      <p>Estadio Olímpico Lluís Companys</p>
+      <div class="resumen__linea"><span>2x Pista General</span><strong>190,00€</strong></div>
+    </div>
+    <div class="descuento"><input type="text" placeholder="Código de descuento"><button type="button" class="boton">Aplicar</button></div>
+    <div class="resumen__desglose">
+      <div class="resumen__linea"><span>Precio entradas</span><span>190,00€</span></div>
+      <div class="resumen__linea"><span>Gastos de gestión</span><span>12,50€</span></div>
+    </div>
+    <div class="resumen__total"><span>Total a pagar</span><strong>202,50€</strong></div>
+    <a href="index.html" class="boton boton--bloque">Confirmar Compra</a>
+  </aside>
+</main>
+<div class="barra-pago">
+  <div><small>Total definitivo</small><strong>202,50€</strong></div>
+  <a href="index.html" class="boton">Pagar Ahora</a>
+</div>
+</body>
+</html>
